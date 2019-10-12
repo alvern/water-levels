@@ -5,6 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+# table for lake lavel measurements
 class Lake_levels(Base):
     __tablename__ = 'lake_levels'
     id = Column(Integer())
@@ -16,7 +17,10 @@ class Lake_levels(Base):
         {},
     )
 
+# table for lake names and ids
 class Lake_names(Base):
     __tablename__ = 'lake_names'
     id = Column(Integer(), primary_key=True)
     name = Column(String())
+
+
