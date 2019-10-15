@@ -28,10 +28,10 @@ d3.json(watershed, function(data) {
 // Help from Jack
 // var boundary = L.polyLine(data).addTo(map);
 
-    data["features"].forEach(function(feature) {
-      var coordinates = feature["geometry"]["coordinates"]
-      console.log(coordinates)
-      });
+    // data["features"].forEach(function(feature) {
+    //   var coordinates = feature["geometry"]["coordinates"]
+    //   console.log(coordinates)
+    //   });
     
 
 });
@@ -51,10 +51,10 @@ d3.json(watershed, function(data) {
     // }
   
   // // Loop through the siteData array and create one marker for each site
-  // for (var i = 0; i < data.length; i++) {
-  //   var watershedArea = data.features.geometry[i];
-  //   L.multiPolygon(coordinates)
-  //     .addTo(map);      
+  for (var i = 0; i < data.length; i++) {
+    var watershedArea = data.features.geometry[i];
+    L.multiPolygon(coordinates)
+      .addTo(map);      
   // }
   // console.log(watershedArea)
 // });
@@ -94,6 +94,7 @@ var siteCSV = d3.csv(locations, function(siteData) {
   for (var i = 0; i < siteData.length; i++) {
     var site = siteData[i];
     L.marker([site.lat, site.long])
+      .bindPopup("<h1>" + site.site + "</h1> <hr> <h3>" + site.name + "<h3>Water Level:   </h3>")
       .addTo(map);
   }
 });
