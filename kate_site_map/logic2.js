@@ -1,3 +1,6 @@
+
+
+
 // Creating our initial map object
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
@@ -5,7 +8,18 @@ var map = L.map("map", {
     center: [44.953457, -93.502959],
     zoom: 12
   });
-  
+map.on('load', function() {
+  map.addLayer({
+    id: 'raster-layer',
+    type: 'raster',
+    source: {
+      type: 'raster',
+      tiles: ['https://api.mapbox.com/v4/{tileset_id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWx2ZXJuIiwiYSI6ImNrMThodHQ5ODBncGozZHBpOWMzMmoxZGEifQ.HFzDavmp5CAcm06RFJ-3kg'],
+    },
+    minzoom: 0,
+    maxzoom: 22
+  });
+});  
   // Adding a tile layer (the background map image) to our map
   // We use the addTo method to add objects to our map
 
