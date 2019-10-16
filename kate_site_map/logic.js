@@ -1,3 +1,5 @@
+
+var API_KEY = "sk.eyJ1IjoiYWx2ZXJuIiwiYSI6ImNrMWxqZnNjejAxazczbm1ic3VpaWVtbXMifQ.ybo-3Wvk4XJXpcT0SpsYXQ"
 // Creating our initial map object
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
@@ -7,12 +9,17 @@ var map = L.map("map", {
   });
   
   // Adding a tile layer (the background map image) to our map
+// var dataset_token = "ck1sm9n9q2jld2inpctk627yv"
+// https://api.mapbox.com/datasets/v1/alvern/{dataset_id}?access_token=
   // We use the addTo method to add objects to our map
-  L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+  L.tileLayer("https://api.mapbox.com/v4/{tileset_id}/", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 100,
     id: "mapbox.streets",
-    accessToken: API_KEY
+    accessToken: API_KEY,
+    tileset_id: "alvern.ck1sm9n9q2jld2inpctk627yv-0ofls",
+    zoom: 25,
+    format: ".vector.pbf"
   }).addTo(map);
 
 

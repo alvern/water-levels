@@ -8,12 +8,20 @@ var map = L.map("map", {
   
   // Adding a tile layer (the background map image) to our map
   // We use the addTo method to add objects to our map
+
   L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 50,
     id: "mapbox.streets",
     accessToken: API_KEY
   }).addTo(map);
+  L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 50,
+    id: "alvern.ck1sm9n9q2jld2inpctk627yv-0ofls",
+    accessToken: API_KEY
+  }).addTo(map);
+
 
 
 var watershed = "/data/geospatial/Watersheds.geojson";
@@ -50,11 +58,11 @@ d3.json(watershed, function(data) {
     // console.log(test);
     // }
   
-  // // Loop through the siteData array and create one marker for each site
-  for (var i = 0; i < data.length; i++) {
-    var watershedArea = data.features.geometry[i];
-    L.multiPolygon(coordinates)
-      .addTo(map);      
+  // // // Loop through the siteData array and create one marker for each site
+  // for (var i = 0; i < data.length; i++) {
+  //   var watershedArea = data.features.geometry[i];
+  //   L.multiPolygon(coordinates)
+  //     .addTo(map);      
   // }
   // console.log(watershedArea)
 // });
