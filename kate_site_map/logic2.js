@@ -6,15 +6,17 @@
 // This gets inserted into the div with an id of 'map'
 var map = L.map("map", {
     center: [44.953457, -93.502959],
-    zoom: 12
+    zoom: 12,
+    layers: []
   });
+  
 map.on('load', function() {
   map.addLayer({
     id: 'raster-layer',
     type: 'raster',
     source: {
       type: 'raster',
-      tiles: ['https://api.mapbox.com/v4/{tileset_id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWx2ZXJuIiwiYSI6ImNrMThodHQ5ODBncGozZHBpOWMzMmoxZGEifQ.HFzDavmp5CAcm06RFJ-3kg'],
+      tiles: ['https://api.tiles.mapbox.com/v4/alvern.ck1sm9n9q2jld2inpctk627yv-0ofls/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiYWx2ZXJuIiwiYSI6ImNrMWxqZnNjejAxazczbm1ic3VpaWVtbXMifQ.ybo-3Wvk4XJXpcT0SpsYXQ'],
     },
     minzoom: 0,
     maxzoom: 22
@@ -22,19 +24,21 @@ map.on('load', function() {
 });  
   // Adding a tile layer (the background map image) to our map
   // We use the addTo method to add objects to our map
-
-  L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
-    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-    maxZoom: 50,
-    id: "mapbox.streets",
-    accessToken: API_KEY
-  }).addTo(map);
   L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 50,
     id: "alvern.ck1sm9n9q2jld2inpctk627yv-0ofls",
     accessToken: API_KEY
   }).addTo(map);
+
+  L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    maxZoom: 50,
+    opacity: .2,
+    id: "mapbox.streets",
+    accessToken: API_KEY
+  }).addTo(map);
+
 
 
 
@@ -121,4 +125,16 @@ var siteCSV = d3.csv(locations, function(siteData) {
   }
 });
 
+// var urlFaultLines = 'https://api.tiles.mapbox.com/v4/alvern.ck1sm9n9q2jld2inpctk627yv-0ofls/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiYWx2ZXJuIiwiYSI6ImNrMWxqZnNjejAxazczbm1ic3VpaWVtbXMifQ.ybo-3Wvk4XJXpcT0SpsYXQ'
 
+// d3.json(urlFaultLines, function (response) {
+//   console.log(response);
+
+//   var plates = L.geoJSON(response, {
+//       style: lines => { return { color: "orange" } }
+//   });
+
+//   plates.addTo(map.FAULT_LINES);
+
+
+// });
