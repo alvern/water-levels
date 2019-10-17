@@ -93,7 +93,7 @@ def all_lake_data():
 # route returns api with json of all data for a specific lake
 @app.route("/api/lakes/<lake>")
 def lake_data(lake):
-    
+    """Returns json of lake data for a specific lake, identified by name (case sensitive)"""
     return jsonify(lake_dict[lake])
 
 
