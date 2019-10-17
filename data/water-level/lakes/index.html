@@ -31,11 +31,12 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
+
 //Read the data
 d3.csv("lakes.csv", function(data) {
 
 // List of groups (here I have one group per column)
-var allGroup = d3.map(data, function(d){return(d.id)}).keys()
+var allGroup = d3.map(data, function(d){return(d.LAKE_NAME)}).keys()
 
 // add the options to the button
 d3.select("#selectButton")
@@ -58,48 +59,59 @@ var x = d3.scaleTime()
     return new Date(d.read_date); 
   }))
   .range([0, width]);
+
+
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
   .call(d3.axisBottom(x).ticks(7));
-
-  
+ 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([d3.min(data, function(d) { return +d.elevation; }), d3.max(data, function(d) { return +d.elevation; })])
-  .range([ height, 0 ]);
-svg.append("g")
-  .call(d3.axisLeft(y));
+    .range([height, 0]);
+
+var y_axis = d3.axisLeft(y);
+
+svg.append('g')
+    .attr('class', 'y axis');
+
+
+
 
 // Initialize line with first group of the list
 var line = svg
   .append('g')
   .append("path")
-    .datum(data.filter(function(d){return d.id==allGroup[0]}))
+    .datum(data.filter(function(d){return d.LAKE_NAME==allGroup[0]}))
     .attr("d", d3.line()
       .x(function(d) { return x(new Date(d.read_date)) })
       .y(function(d) { return y(+d.elevation) })
     )
     .attr("stroke", function(d){ return myColor("valueA") })
-    .style("stroke-width", 4)
+    .style("stroke-width", 3)
     .style("fill", "none")
 
 // A function that update the chart
 function update(selectedGroup) {
 
   // Create new data with the selection?
-  var dataFilter = data.filter(function(d){return d.id==selectedGroup})
-
+  var dataFilter = data.filter(function(d){return d.LAKE_NAME==selectedGroup})
+  y.domain([d3.min(dataFilter, function(d) { return +d.elevation; }), d3.max(dataFilter, function(d) { return +d.elevation; })])
   // Give these new data to update line
   line
       .datum(dataFilter)
       .transition()
-      .duration(1000)
+      .duration(2000)
       .attr("d", d3.line()
         .x(function(d) { return x(new Date(d.read_date)) })
         .y(function(d) { return y(+d.elevation) })
       )
       .attr("stroke", function(d){ return myColor(selectedGroup) })
+  
+  svg.select('.y.axis')
+  .transition(2000)
+  .call(y_axis);
 }
+
 
 // When the button is changed, run the updateChart function
 d3.select("#selectButton").on("change", function(d) {
