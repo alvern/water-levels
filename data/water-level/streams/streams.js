@@ -1,9 +1,9 @@
-Plotly.d3.csv("CGL01_2017-2018_TrollData.csv", function (row1) {
+Plotly.d3.csv("CPA01_2017-2018_TrollData.csv", function (row1) {
     Plotly.d3.csv("CLO01_2017-2018_TrollData.csv", function (row2) {
         Plotly.d3.csv("CLO08_2017-2018_TrollData.csv", function (row3) {
             Plotly.d3.csv("CLO09_2017-2018_TrollData.csv", function (row4) {
                 Plotly.d3.csv("CMH01_2017-2018_TrollData.csv", function (row5) {
-                    Plotly.d3.csv("CPA01_2017-2018_TrollData.csv", function (row6) {
+                    Plotly.d3.csv("CGL01_2017-2018_TrollData.csv", function (row6) {
 
                         function unpack(row1, key) {
                             return row1.map(function (row) { return row[key]; });
@@ -27,50 +27,50 @@ Plotly.d3.csv("CGL01_2017-2018_TrollData.csv", function (row1) {
                         var trace1 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CGL01',
+                            name: 'Painter Creek',
                             x: unpack(row1, 'Date'),
                             y: unpack(row1, 'Stage [ft]'),
-                            line: { color: 'red' }
+                            line: { color: '00b8ff' }
                         };
                         var trace2 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CLO01',
+                            name: 'Long Lake',
                             x: unpack(row2, 'Date'),
                             y: unpack(row2, 'Stage [ft]'),
-                            line: { color: 'orange' }
+                            line: { color: '1034a6' }
                         };
                         var trace3 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CLO08',
+                            name: 'Tanglewood',
                             x: unpack(row3, 'Date'),
                             y: unpack(row3, 'Stage [ft]'),
-                            line: { color: 'green' }
+                            line: { color: '008ecc' }
                         };
                         var trace4 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CLO09',
+                            name: 'Wolsfeld Lake',
                             x: unpack(row4, 'Date'),
                             y: unpack(row4, 'Stage [ft]'),
-                            line: { color: 'yellow' }
+                            line: { color: '3fe0d0' }
                         };
                         var trace5 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CMH01',
+                            name: '494 & Minnetonka Blvd.',
                             x: unpack(row5, 'Date'),
                             y: unpack(row5, 'Stage [ft]'),
-                            line: { color: 'blue' }
+                            line: { color: '0080ff' }
                         };
                         var trace6 = {
                             type: "scatter",
                             mode: "lines",
-                            name: 'CPA01',
+                            name: 'Gleason Lake',
                             x: unpack(row6, 'Date'),
                             y: unpack(row6, 'Stage [ft]'),
-                            line: { color: 'indigo' }
+                            line: { color: '468284' }
                         };
 
                         var data = [trace1, trace2, trace3, trace4, trace5, trace6];
