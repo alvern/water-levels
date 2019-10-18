@@ -46,8 +46,8 @@ var map = L.map("map", {
   ]
 });
 
-// Add 'streetmap' tile layer to the map as default
-streetmap.addTo(map);
+// Add 'darkmap' tile layer to the map as default
+darkmap.addTo(map);
 
 // Create an overlays object to add to the layer control
 var overlays = {
