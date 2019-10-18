@@ -68,7 +68,7 @@
 <script>
 
   // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 30, bottom: 40, left: 60 },
+  var margin = { top: 10, right: 60, bottom: 40, left: 60 },
     width = 1260 - margin.left - margin.right,
     height = 430 - margin.top - margin.bottom;
 
@@ -113,12 +113,14 @@
 
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).ticks(8));
+      .call(d3.axisBottom(x).ticks(9));
 
     svg.append("text")
       .attr("transform", "translate(" + (width/2) + " ," +
       (height + margin.top + 30) + ")")
       .style("text-anchor", "middle")
+      .style("font-size", "20px")
+      .style("font-weight", "bold")
       .text("Date");
 
     svg.select("g")
