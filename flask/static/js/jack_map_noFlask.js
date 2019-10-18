@@ -100,8 +100,7 @@ d3.csv(lake_locations_csv, function(lake_info) {
 
   // append marker to markers list
   marker.addTo(layers.LAKES)
-    .bindPopup(`<center><h4><b>Lake:</b> ${lake_info.name}</h4><br><a href="">Explore Data</a></center>`);
-
+    .bindPopup(`<center><h4><b>Lake:</b> ${lake_info.name}</h4><br><a href="../../data/water-level/lakes/lake_level.html">Explore Data</a></center>`);
 
 });
 
@@ -127,7 +126,7 @@ d3.csv(creek_locations_csv, function(site_info) {
 
   // append marker to markers list
   marker.addTo(layers.CREEK_SITES)
-    .bindPopup(`<center><h4><b>Creek site:</b> ${site_info.name}</h4><br><a href="">Explore Data</a></center>`);
+    .bindPopup(`<center><h4><b>Creek site:</b> ${site_info.name}</h4><br><a href="../../data/water-level/streams/index.html">Explore Data</a></center>`);
 
 
 });
