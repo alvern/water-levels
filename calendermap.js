@@ -95,7 +95,7 @@ d3.csv("transformed_msp_precip.csv", function(error, csv) {
   var mousemove = function(d) {
     console.log(d)
     tooltip
-      .html("Precipitation: " + data[d].toFixed(2)+"in")
+      .html("Precip: " + data[d].toFixed(2)+"in")
       .style("left", d3.event.pageX + "px")
       .style("top", d3.event.pageY + "px")
   }
