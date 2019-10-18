@@ -111,7 +111,7 @@ d3.csv(lake_locations_csv, function(lake_info) {
 // =================================================================================================
 
 // Store csv location
-var creek_locations_csv = "../data/geospatial/site_locations_edited.csv";
+var creek_locations_csv = "../resources/site_locations_edited.csv";
 
 // Grab lake location data with d3, then add markers to map layer
 d3.csv(creek_locations_csv, function(site_info) {
