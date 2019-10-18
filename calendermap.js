@@ -25,7 +25,6 @@ var svg = d3.select(".calender-map").selectAll("svg")
     .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
 
 svg.append("text")
-    .attr("id", "BasicTooltip") ///Tooltip Addition
     .attr("transform", "translate(-38," + cellSize * 3.5 + ")rotate(-90)")
     .style("text-anchor", "middle")
     .text(function(d) { return d; });
@@ -78,9 +77,31 @@ d3.csv("transformed_msp_precip.csv", function(error, csv) {
 
  console.log(csv)
 
-//  var div = d3.select("body").append("div")	
-//  .attr("class", "tooltip")				
-//  .style("opacity", 0);
+  // create a tooltip
+  var tooltip = d3.select(".calender-map")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    tooltip.style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    console.log(d)
+    tooltip
+      .html("Precipitation: " + data[d].toFixed(2)+"in")
+      .style("left", d3.event.pageX + "px")
+      .style("top", d3.event.pageY + "px")
+  }
+  var mouseleave = function(d) {
+    tooltip.style("opacity", 0)
+  }
 
 var precip_max = d3.max(csv, function(d) { return d.precip; });
  
@@ -91,22 +112,15 @@ var data = d3.nest()
 
 console.log(data)
 
-  rect.filter(function(d) { return d in data; })
+  rect.filter(function(d) { 
+    // console.log(data[d])
+    return d in data; })
       .attr("fill", function(d) { return color(data[d]); })
       .attr("data-title", function(d) { return "value : "+Math.round(data[d]*100)})
-    //   .on("mouseover", function(d) {		
-    //     div.transition()		
-    //        .duration(200)		
-    //        .style("opacity", .9);		
-    //     div.html(formatTime(d.date) + "<br/>"  + d.precip)	
-    //        .style("left", (d3.event.pageX) + "px")		
-    //        .style("top", (d3.event.pageY - 28) + "px");	
-    //     })					
-    // .on("mouseout", function(d) {		
-    //     div.transition()		
-    //         .duration(500)		
-    //         .style("opacity", 0);	
-    // });  
+      // .data
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave)
   // d3.select("rect").tooltip({container: 'body', html: true, placement:'top'}); 
   });
 
