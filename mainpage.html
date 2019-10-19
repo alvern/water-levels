@@ -4,116 +4,131 @@
 <head>
   <meta charset="UTF-8">
   <title>Water Levels Project</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!--NavBar--> 
+  <!--NavBar-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home</a>
-              </li>
-          </ul>
-      </div>
-      <div class="mx-auto order-0">
-          <a class="navbar-brand mx-auto" href="index.html">Water Level Project</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown justify-content-end">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualizations</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="calendar.html">Historic Precipitation</a>
-                    <a class="dropdown-item" href="data/water-level/lakes/lake_level.html">Lake Levels</a>
-                    <a class="dropdown-item" href="flask/templates/index.html">Watershed Map</a>
-                    <a class="dropdown-item" href="data/water-level/streams/index.html">Stream Levels</a>
-                    <a class="dropdown-item" href="data/weather/index.html">Precipitation at MSP</a>
-<a class="dropdown-item" href="../../../Data-Scraping.html">ETL Notebook</a>
-                  </div>
-                </li>  
-            <li class="nav-item">
-                  <a class="nav-link" href="group.html">Group Members</a>
-          </ul>
-      </div>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="index.html">Water Level Project</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown justify-content-end">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">Visualizations</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="calendar.html">Historic Precipitation</a>
+            <a class="dropdown-item" href="data/water-level/lakes/lake_level.html">Lake Levels</a>
+            <a class="dropdown-item" href="flask/templates/index.html">Watershed Map</a>
+            <a class="dropdown-item" href="data/water-level/streams/index.html">Stream Levels</a>
+            <a class="dropdown-item" href="data/weather/index.html">Precipitation at MSP</a>
+            <a class="dropdown-item" href="Data-Scraping.html">ETL Notebook</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="group.html">Group Members</a>
+      </ul>
+    </div>
   </nav>
 
   <!--Landing Page Items -->
   <br>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h3 style="text-align:center" class="card-title">Group Project Summary </h3>
-            <p> The Twin Cities has observed record breaking precipitation over the past several years.  
-                This includes an increase in precipitation during periods outside of the growing season when  
-                the ground is not frozen, leading to increasing groundwater recharge rates because plants are  
-                not growing and taking up water. </p>  
-            <ul>
-              <li>2014 had the wettest January 1 – June 30 on record</li>
-              <li>2016 was previously the wettest year on record</li>
-              <li>August 2016-July 2017 was the wettest 12-month period on record</li>
-              <li>2019 has already surpassed 2016 as the wettest year on record</li>
-            </ul>
-            <p> Most residents are under the impression that water issues they are having are localized to their yard, basement, or neighborhood. 
-                Furthermore, cities and counties are being inundated with calls from residents demanding the city fix their water issues. 
-                Unfortunately, the issue is driven by record precipitation that has occurred over the past 7 years, which is a problem that cannot be solved at the local level.</p>
-            <p>The goal of this project is to develop an interactive dashboard that walks residents through as story that explains that water levels 
-                are increasing throughout the State of Minnesota and the midwest. The dashboard will go through four web pages that present a 
-                specific narrative of climate driven high water level story. </p>               
-          </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 style="text-align:center" class="card-title">Group Project Summary </h3>
+          <p> The Twin Cities has observed record breaking precipitation over the past several years.
+            This includes an increase in precipitation during periods outside of the growing season when
+            the ground is not frozen, leading to increasing groundwater recharge rates because plants are
+            not growing and taking up water. </p>
+          <ul>
+            <li>2014 had the wettest January 1 – June 30 on record</li>
+            <li>2016 was previously the wettest year on record</li>
+            <li>August 2016-July 2017 was the wettest 12-month period on record</li>
+            <li>2019 has already surpassed 2016 as the wettest year on record</li>
+          </ul>
+          <p> Most residents are under the impression that water issues they are having are localized to their yard,
+            basement, or neighborhood.
+            Furthermore, cities and counties are being inundated with calls from residents demanding the city fix their
+            water issues.
+            Unfortunately, the issue is driven by record precipitation that has occurred over the past 7 years, which is
+            a problem that cannot be solved at the local level.</p>
+          <p>The goal of this project is to develop an interactive dashboard that walks residents through as story that
+            explains that water levels
+            are increasing throughout the State of Minnesota and the midwest. The dashboard will go through four web
+            pages that present a
+            specific narrative of climate driven high water level story. </p>
         </div>
       </div>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Data Visualizations</h3>
-            <p class="card-text">Click through the carousel to view each of the water level visualizations generated for this project. You can also use the dropdown at the top for more details on each of the visualizations.</p>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      </ol>
-                  <div class="carousel-item active">
-                    <img src="Images/Historic_Precipitation.jpg" class="d-block w-100" alt="Historic Precipitation">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/Watershed.png" class="d-block w-100" alt="Watershed">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/lake_level.PNG" class="d-block w-100" alt="Lake Level">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="Images/streams.png" class="d-block w-100" alt="Streams">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/precipMSP.png" class="d-block w-100" alt="Precipitation at MSP">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Data Visualizations</h3>
+          <p class="card-text">Click through the carousel to view each of the water level visualizations generated for
+            this project. You can also use the dropdown at the top for more details on each of the visualizations.</p>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-item active">
+                <img src="Images/Historic_Precipitation.jpg" class="d-block w-100" alt="Historic Precipitation">
               </div>
+              <div class="carousel-item">
+                <img src="Images/Watershed.png" class="d-block w-100" alt="Watershed">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/lake_level.PNG" class="d-block w-100" alt="Lake Level">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/streams.png" class="d-block w-100" alt="Streams">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/precipMSP.png" class="d-block w-100" alt="Precipitation at MSP">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 </body>
+
 </html>

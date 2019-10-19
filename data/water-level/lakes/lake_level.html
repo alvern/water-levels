@@ -8,190 +8,198 @@
 <head>
   <meta charset="UTF-8">
   <title>Water Levels Project</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- link rel="stylesheet" href="style.css" -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- link rel="stylesheet" href="style.css" -->
 </head>
 
 <body>
 
-  <!--NavBar--> 
+  <!--NavBar-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="../../../index.html">Home</a>
-              </li>
-          </ul>
-      </div>
-      <div class="mx-auto order-0">
-          <a class="navbar-brand mx-auto" href="../../../index.html">Water Level Project</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown justify-content-end">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualizations</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="../../../calendar.html">Historic Precipitation</a>
-                    <a class="dropdown-item" href="../../../data/water-level/lakes/lake_level.html">Lake Levels</a>
-                    <a class="dropdown-item" href="../../../flask/templates/index.html">Watershed Map</a>
-                    <a class="dropdown-item" href="../../../data/water-level/streams/index.html">Stream Levels</a>
-                    <a class="dropdown-item" href="../../../data/weather/index.html">Precipitation at MSP</a>
-<a class="dropdown-item" href="../../../Data-Scraping.html">ETL Notebook</a>
-                  </div>
-                </li>  
-            <li class="nav-item">
-                  <a class="nav-link" href="../../../group.html">Group Members</a>
-          </ul>
-      </div>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../../../index.html">Home</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="../../../index.html">Water Level Project</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown justify-content-end">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">Visualizations</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="../../../calendar.html">Historic Precipitation</a>
+            <a class="dropdown-item" href="../../../data/water-level/lakes/lake_level.html">Lake Levels</a>
+            <a class="dropdown-item" href="../../../flask/templates/index.html">Watershed Map</a>
+            <a class="dropdown-item" href="../../../data/water-level/streams/index.html">Stream Levels</a>
+            <a class="dropdown-item" href="../../../data/weather/index.html">Precipitation at MSP</a>
+            <a class="dropdown-item" href="../../../Data-Scraping.html">ETL Notebook</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../../group.html">Group Members</a>
+      </ul>
+    </div>
   </nav>
 
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
 
-<!-- Initialize a select button -->
-<select id="selectButton"></select>
-<p> Please select a lake.</p>
+  <!-- Initialize a select button -->
+  <select id="selectButton"></select>
+  <p> Please select a lake.</p>
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+  <!-- Create a div where the graph will take place -->
+  <div id="my_dataviz"></div>
 
-<!-- Color Scale -->
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-
-
-<script>
-
-  // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 60, bottom: 40, left: 60 },
-    width = 1260 - margin.left - margin.right,
-    height = 430 - margin.top - margin.bottom;
-
-  // append the svg object to the body of the page
-  var svg = d3.select("#my_dataviz")
-    .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-      "translate(" + margin.left + "," + margin.top + ")");
+  <!-- Color Scale -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
 
-  //Read the data
-  d3.csv("lakes.csv", function (data) {
+  <script>
 
-    // List of groups (here I have one group per column)
-    var allGroup = d3.map(data, function (d) { return (d.LAKE_NAME) }).keys()
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 60, bottom: 40, left: 60 },
+      width = 1260 - margin.left - margin.right,
+      height = 430 - margin.top - margin.bottom;
 
-    // add the options to the button
-    d3.select("#selectButton")
-      .selectAll('myOptions')
-      .data(allGroup)
-      .enter()
-      .append('option')
-      .text(function (d) { return d; }) // text showed in the menu
-      .attr("value", function (d) { return d; }) // corresponding value returned by the button
-
-    // A color scale: one color for each group
-    var myColor = d3.scaleOrdinal()
-      .domain(allGroup)
-      .range(d3.schemeSet2);
-
-    // Add X axis --> it is a date format
-
-    var x = d3.scaleTime()
-      .domain(d3.extent(data, function (d) {
-        return new Date(d.read_date);
-      }))
-      .range([0, width]);
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
 
 
-    svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).ticks(9));
+    //Read the data
+    d3.csv("lakes.csv", function (data) {
 
-    svg.append("text")
-      .attr("transform", "translate(" + (width/2) + " ," +
-      (height + margin.top + 30) + ")")
-      .style("text-anchor", "middle")
-      .style("font-size", "20px")
-      .style("font-weight", "bold")
-      .text("Date");
+      // List of groups (here I have one group per column)
+      var allGroup = d3.map(data, function (d) { return (d.LAKE_NAME) }).keys()
 
-    svg.select("g")
-      .selectAll("text")
-      .style("font-size", "20px");
+      // add the options to the button
+      d3.select("#selectButton")
+        .selectAll('myOptions')
+        .data(allGroup)
+        .enter()
+        .append('option')
+        .text(function (d) { return d; }) // text showed in the menu
+        .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
-    // Add Y axis
-    var y = d3.scaleLinear()
-      .range([height, 0]);
+      // A color scale: one color for each group
+      var myColor = d3.scaleOrdinal()
+        .domain(allGroup)
+        .range(d3.schemeSet2);
 
-    var y_axis = d3.axisLeft(y);
+      // Add X axis --> it is a date format
 
-    svg.append('g')
-      .attr('class', 'y axis');
-    
-    svg.append('text')
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0- margin.left)
-    .attr("x", 0-(height/2))
-    .attr("dy", "1em")
-    .style("text-anchor", "middle")
-    .text("Elevation (ft)");
+      var x = d3.scaleTime()
+        .domain(d3.extent(data, function (d) {
+          return new Date(d.read_date);
+        }))
+        .range([0, width]);
 
-    // Initialize line with first group of the list
-    var line = svg
-      .append('g')
-      .append("path")
-      .datum(data.filter(function (d) { return d.LAKE_NAME == allGroup[0] }))
-      .attr("d", d3.line()
-        .x(function (d) { return x(new Date(d.read_date)) })
-        .y(function (d) { return y(+d.elevation) })
-      )
-      .attr("stroke", function (d) { return myColor("valueA") })
-      .style("stroke-width", 3)
-      .style("fill", "none")
 
-    // A function that update the chart
-    function update(selectedGroup) {
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x).ticks(9));
 
-      // Create new data with the selection?
-      var dataFilter = data.filter(function (d) { return d.LAKE_NAME == selectedGroup })
-      y.domain([d3.min(dataFilter, function (d) { return +d.elevation; }), d3.max(dataFilter, function (d) { return +d.elevation; })])
-      // Give these new data to update line
-      line
-        .datum(dataFilter)
-        .transition()
-        .duration(2000)
+      svg.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," +
+          (height + margin.top + 30) + ")")
+        .style("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("font-weight", "bold")
+        .text("Date");
+
+      svg.select("g")
+        .selectAll("text")
+        .style("font-size", "20px");
+
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .range([height, 0]);
+
+      var y_axis = d3.axisLeft(y);
+
+      svg.append('g')
+        .attr('class', 'y axis');
+
+      svg.append('text')
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Elevation (ft)");
+
+      // Initialize line with first group of the list
+      var line = svg
+        .append('g')
+        .append("path")
+        .datum(data.filter(function (d) { return d.LAKE_NAME == allGroup[0] }))
         .attr("d", d3.line()
           .x(function (d) { return x(new Date(d.read_date)) })
           .y(function (d) { return y(+d.elevation) })
         )
-        .attr("stroke", function (d) { return myColor(selectedGroup) })
+        .attr("stroke", function (d) { return myColor("valueA") })
+        .style("stroke-width", 3)
+        .style("fill", "none")
 
-      svg.select('.y.axis')
-        .transition(2000)
-        .call(y_axis);
-    }
+      // A function that update the chart
+      function update(selectedGroup) {
+
+        // Create new data with the selection?
+        var dataFilter = data.filter(function (d) { return d.LAKE_NAME == selectedGroup })
+        y.domain([d3.min(dataFilter, function (d) { return +d.elevation; }), d3.max(dataFilter, function (d) { return +d.elevation; })])
+        // Give these new data to update line
+        line
+          .datum(dataFilter)
+          .transition()
+          .duration(2000)
+          .attr("d", d3.line()
+            .x(function (d) { return x(new Date(d.read_date)) })
+            .y(function (d) { return y(+d.elevation) })
+          )
+          .attr("stroke", function (d) { return myColor(selectedGroup) })
+
+        svg.select('.y.axis')
+          .transition(2000)
+          .call(y_axis);
+      }
 
 
-    // When the button is changed, run the updateChart function
-    d3.select("#selectButton").on("change", function (d) {
-      // recover the option that has been chosen
-      var selectedOption = d3.select(this).property("value")
-      // run the updateChart function with this selected option
-      update(selectedOption)
+      // When the button is changed, run the updateChart function
+      d3.select("#selectButton").on("change", function (d) {
+        // recover the option that has been chosen
+        var selectedOption = d3.select(this).property("value")
+        // run the updateChart function with this selected option
+        update(selectedOption)
+      })
+
     })
 
-  })
 
-
-</script>
+  </script>
 
 </body>

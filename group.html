@@ -1,167 +1,180 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>                
-        <meta charset="UTF-8">
-        <title>Water Levels Project</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
-        </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Water Levels Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <style>
-/* Columns side by side */
-.column {
-  float: left;
-  width: 19.5%;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  padding: 0 8px;
-}
-
-/* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
+  /* Columns side by side */
   .column {
-    width: 100%;
-    display: block;
+    float: left;
+    width: 19.5%;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 0 8px;
   }
-}
 
-/* Add some shadows to create a card effect */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  min-height: 350px;
-}
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
 
-/* Some left and right padding inside the container */
-.container {
-  padding: 0 16px;
-}
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    min-height: 350px;
+  }
 
-/* Clear floats */
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
 
-.title {
-  color: grey;
-}
+  /* Clear floats */
+  .container::after,
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
+  .title {
+    color: grey;
+  }
 
-.button:hover {
-  background-color: #555;
-}
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
 
+  .button:hover {
+    background-color: #555;
+  }
 </style>
 
-  <!--NavBar--> 
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-            </ul>
+<!--NavBar-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+    </ul>
+  </div>
+  <div class="mx-auto order-0">
+    <a class="navbar-brand mx-auto" href="index.html">Water Level Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown justify-content-end">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+          aria-expanded="false">Visualizations</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="calendar.html">Historic Precipitation</a>
+          <a class="dropdown-item" href="/water-levels/data/water-level/lakes/lake_level.html">Lake Levels</a>
+          <a class="dropdown-item" href="/water-levels/flask/templates/index.html">Watershed Map</a>
+          <a class="dropdown-item" href="/water-levels/data/water-level/streams/index.html">Stream Levels</a>
+          <a class="dropdown-item" href="/water-levels/data/weather/index.html">Precipitation at MSP</a>
+          <a class="dropdown-item" href="Data-Scraping.html">ETL Notebook</a>
         </div>
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Water Level Project</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown justify-content-end">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualizations</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="calendar.html">Historic Precipitation</a>
-                      <a class="dropdown-item" href="/water-levels/data/water-level/lakes/lake_level.html">Lake Levels</a>
-                      <a class="dropdown-item" href="/water-levels/flask/templates/index.html">Watershed Map</a>
-                      <a class="dropdown-item" href="/water-levels/data/water-level/streams/index.html">Stream Levels</a>
-                      <a class="dropdown-item" href="/water-levels/data/weather/index.html">Precipitation at MSP</a>
-<a class="dropdown-item" href="../../../Data-Scraping.html">ETL Notebook</a>
-                    </div>
-                  </li>  
-              <li class="nav-item">
-                    <a class="nav-link" href="group.html">Group Members</a>
-            </ul>
-        </div>
-    </nav>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="group.html">Group Members</a>
+    </ul>
+  </div>
+</nav>
 
 <!-- Image Cards-->
 <div class="row">
-        <div class="column">
-          <div class="card">
-            <img src="Images/BearheadLake.jpg" alt="Bear Head Lake" style="width:100%">
-            <div class="container">
-              <h2>Brian</h2>
-              <p class="title">Favorite Lake:</p>
-              <p>Bear Head Lake</p>
-              <p><button class = "button" onclick= "window.open('https://goo.gl/maps/CVMR7t3bWRdccLwG9')"> Where is it? </button> </p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="column ">
-          <div class="card">
-            <img src="Images/LakeFive.jpg" alt="Lake Five" style="width:100%">
-            <div class="container">
-              <h2>Ashley</h2>
-              <p class="title">Favorite Lake:</p>
-              <p>Lake Five</p>
-              <p><button class = "button" onclick= "window.open('https://goo.gl/maps/cWG6ZmodYKoH1wy56')"> Where is it? </button> </p>
-              </div>
-          </div>
-        </div>
-
-        <div class="column">
-                <div class="card">
-                  <img src="Images/LakeNokomis.jpg" alt="Lake Nokomis" style="width:100%">
-                  <div class="container">
-                    <h2>Jack</h2>
-                    <p class="title">Favorite Lake:</p>
-                    <p>Lake Nokomis</p>
-                    <p><button class = "button" onclick= "window.open('https://goo.gl/maps/iUYiB2EnM8Dubq9v6')"> Where is it? </button> </p>
-                  </div>
-                </div>
-              </div>
-        
-        <div class="column">
-            <div class="card">
-                <img src="Images/WirthLake.jpg" alt="Wirth Lake" style="width:100%">
-                <div class="container">
-                    <h2>Andy</h2>
-                    <p class="title">Favorite Lake:</p>
-                    <p>Wirth Lake</p>
-                    <p><button class = "button" onclick= "window.open('https://goo.gl/maps/7YNq1Pf6rgGhdbUS8')"> Where is it? </button> </p>
-                </div>
-            </div>
-        </div>
-       
-        <div class="column">
-          <div class="card">
-            <img src="Images/PelicanLake.jpg" alt="Pelican Lake" style="width:100%">
-            <div class="container">
-              <h2>Kate</h2>
-              <p class="title">Favorite Lake:</p>
-              <p>Pelican Lake</p>
-              <p><button class = "button" onclick= "window.open('https://goo.gl/maps/hHwXJM4FnKMKqNCJ6')"> Where is it? </button> </p>
-            </div>
-          </div>
-        </div>      
+  <div class="column">
+    <div class="card">
+      <img src="Images/BearheadLake.jpg" alt="Bear Head Lake" style="width:100%">
+      <div class="container">
+        <h2>Brian</h2>
+        <p class="title">Favorite Lake:</p>
+        <p>Bear Head Lake</p>
+        <p><button class="button" onclick="window.open('https://goo.gl/maps/CVMR7t3bWRdccLwG9')"> Where is it? </button>
+        </p>
       </div>
+    </div>
+  </div>
+
+  <div class="column ">
+    <div class="card">
+      <img src="Images/LakeFive.jpg" alt="Lake Five" style="width:100%">
+      <div class="container">
+        <h2>Ashley</h2>
+        <p class="title">Favorite Lake:</p>
+        <p>Lake Five</p>
+        <p><button class="button" onclick="window.open('https://goo.gl/maps/cWG6ZmodYKoH1wy56')"> Where is it? </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/LakeNokomis.jpg" alt="Lake Nokomis" style="width:100%">
+      <div class="container">
+        <h2>Jack</h2>
+        <p class="title">Favorite Lake:</p>
+        <p>Lake Nokomis</p>
+        <p><button class="button" onclick="window.open('https://goo.gl/maps/iUYiB2EnM8Dubq9v6')"> Where is it? </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/WirthLake.jpg" alt="Wirth Lake" style="width:100%">
+      <div class="container">
+        <h2>Andy</h2>
+        <p class="title">Favorite Lake:</p>
+        <p>Wirth Lake</p>
+        <p><button class="button" onclick="window.open('https://goo.gl/maps/7YNq1Pf6rgGhdbUS8')"> Where is it? </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/PelicanLake.jpg" alt="Pelican Lake" style="width:100%">
+      <div class="container">
+        <h2>Kate</h2>
+        <p class="title">Favorite Lake:</p>
+        <p>Pelican Lake</p>
+        <p><button class="button" onclick="window.open('https://goo.gl/maps/hHwXJM4FnKMKqNCJ6')"> Where is it? </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
